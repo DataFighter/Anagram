@@ -10,7 +10,7 @@ def is_anagram(word_1 = None, word_2 = None):
     if type(word_1) != str or type(word_2) != str:
         raise Exception ('Incorrect parameter type. Plesase input strings')
 
-    # multiply every letter's prime number
+    # multiply every letters' prime number
     def m (word):
         product = 1
         for w in word:
@@ -18,7 +18,7 @@ def is_anagram(word_1 = None, word_2 = None):
             product = product*prime
         return product
 
-    # Check that each word was given
+    # Check that both words were provided
     if word_1 is not None and word_2 is not None:
             # Return true if the products are equal
             # Otherwise return false
@@ -38,7 +38,7 @@ if __name__ == "__main__":
     parser.add_argument("word_2",type=str,  help="The second word to be compared")
     args = parser.parse_args()
 
-    # Run anamgram function and print results
+    # Run anagram function and print results
     if is_anagram(args.word_1,args.word_2):
         print ('Found two anagrams!')
     else:
